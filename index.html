@@ -11,7 +11,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js"></script>
 
 </head>
 <body>
@@ -20,35 +22,43 @@
 
         <div class="timer-control">
             <section id="timer">
-                <span>00</span><span>:</span><span>00</span>
+                <span id="timer-minutes">00</span><span>:</span><span id="timer-seconds">00</span>
             </section>
             <section id="controls">
-                <button class="ph ph-play-circle">
-                    <span class="sr-only">Play</span>
+                <button data-action="toggleRunning" class="ph ph-play-circle" title="Iniciar contador">
+                    <span class="sr-only">Iniciar contador</span>
                 </button>
-                <button class="ph ph-stop-circle">
-                    <span class="sr-only">Stop</span>
+                <button data-action="toggleRunning" class="ph ph-pause-circle" title="Pausar contador">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                <button data-action="reset" class="ph ph-stop-circle" title="Parar contador">
+                    <span class="sr-only">Parar contador</span>
                 </button >
-                <button class="ph ph-plus-circle">
+
+                <button data-action="set" class="ph ph-timer" title="Ajustar contador">
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+
+                <button data-action="addFiveMinutes" class="ph ph-plus-circle" title="Adicionar mais 5 min ao contador">
                     <span class="sr-only">Adicionar mais 5 min</span>
                 </button>
-                <button class="ph ph-minus-circle">
+                <button data-action="removeFiveMinutes" class="ph ph-minus-circle" title="Remover 5 min do contador">
                     <span class="sr-only">Remover 5 min</span>
                 </button>
             </section>
         </div>
 
-        <div class="songs-control">
-            <button class="ph ph-tree">
+        <div id="songs-control">
+            <button class="ph ph-tree music-on">
                 <span class="sr-only">Sons de Floresta</span>
             </button>
-            <button class="ph ph-cloud-rain">
+            <button class="ph ph-cloud-rain music-off">
                 <span class="sr-only">Sons de Chuva</span>
             </button>
-            <button class="ph ph-storefront">
+            <button class="ph ph-storefront music-off">
                 <span class="sr-only">Sons Cafeteria</span>
             </button>
-            <button class="ph ph-flame">
+            <button class="ph ph-flame music-off">
                 <span class="sr-only">Sons Lareira</span>
             </button>
         </div>

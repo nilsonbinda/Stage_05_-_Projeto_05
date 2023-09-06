@@ -25,6 +25,7 @@ main{
     padding: 2rem;
 
     margin: 0 auto;
+
 }
 
 
@@ -57,9 +58,11 @@ main{
     font-size: 4.8rem;
     border: none;
     background: none;
+
+    cursor:pointer;
 }
 
-.songs-control{
+#songs-control{
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: 
@@ -70,7 +73,7 @@ main{
     height: 33.6rem;
 }
 
-.songs-control button{
+#songs-control button{
     width: 13.8rem;
     height: 15.2rem; 
     
@@ -80,16 +83,23 @@ main{
     border:none;
     border-radius: 24px;
 
-    background-color: var(--bg-button);
-    color: var(--text-button);
-
     transition: background 600ms;
 
 }
 
-.songs-control button:hover{
+#songs-control button:hover{
     background-color:var(--bg-button-selected);
     color:var(--text-button-selected);
+}
+
+.music-on{
+    background-color:var(--bg-button-selected);
+    color:var(--text-button-selected);
+}
+
+.music-off{
+    background-color: var(--bg-button);
+    color: var(--text-button);
 }
 
 .sr-only{
@@ -103,6 +113,14 @@ main{
     border: 0;
     appearance: none;
 }
+
+.running .ph-play-circle,
+.running .ph-timer, 
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle{
+    display: none;
+}
+
 
 @media (min-width:800px) {
     main{
