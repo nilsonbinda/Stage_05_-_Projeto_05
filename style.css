@@ -62,7 +62,7 @@ main{
     cursor:pointer;
 }
 
-#songs-control{
+#sounds-control{
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: 
@@ -73,7 +73,7 @@ main{
     height: 33.6rem;
 }
 
-#songs-control button{
+#sounds-control button{
     width: 13.8rem;
     height: 15.2rem; 
     
@@ -87,7 +87,7 @@ main{
 
 }
 
-#songs-control button:hover{
+#sounds-control button:hover{
     background-color:var(--bg-button-selected);
     color:var(--text-button-selected);
 }

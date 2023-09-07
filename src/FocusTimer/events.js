@@ -37,3 +37,11 @@ export function setTimer(){
     })
 }
 
+export function registerSondsControls(){
+    element.soundControls.addEventListener('click',(event)=>{
+        
+        let sounds = event.target.dataset.action
+
+        actions.playSounds(sounds)
+    })
+}

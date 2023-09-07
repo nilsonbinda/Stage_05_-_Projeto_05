@@ -10,4 +10,5 @@ export function start(minutes, seconds){
 
     events.registerTimerControls()
     events.setTimer()
+    events.registerSondsControls()
 }
